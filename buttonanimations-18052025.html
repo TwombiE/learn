@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einzigartige Buttons</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+        }
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Button 1: 3D-Effekt mit Schatten */
+        .button-1 {
+            background-color: #ff5733;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 5px 5px 0px #cc4626;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .button-1:hover {
+            box-shadow: 10px 10px 0px #cc4626;
+        }
+
+        /* Button 2: Neon-Glow mit Farbwechsel */
+        .button-2 {
+            background-color: black;
+            color: cyan;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border: 2px solid cyan;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .button-2:hover {
+            color: magenta;
+            border-color: magenta;
+            box-shadow: 0 0 15px magenta;
+        }
+
+        /* Button 3: Wellenanimation */
+        .button-3 {
+            background: linear-gradient(45deg, #ff33ff, #33ffff);
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .button-3::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: transform 0.5s ease-out;
+            transform: translate(-50%, -50%) scale(0);
+            border-radius: 50%;
+        }
+        .button-3:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="button-container">
+        <button class="button-1">3D Button</button>
+        <button class="button-2">Neon Button</button>
+        <button class="button-3">Wellen Button</button>
+    </div>
+
+</body>
+</html>
